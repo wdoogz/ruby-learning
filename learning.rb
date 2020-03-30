@@ -58,3 +58,13 @@ s.each do |x|
     puts y
   end
 end
+
+people = {
+  "Bob" => "Architect",
+  "Steve" => "Analyst",
+  "Arister" => "Jr Analyst"
+}
+
+people.each do |person|
+  puts person[1]
+end
