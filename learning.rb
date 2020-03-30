@@ -68,3 +68,30 @@ people = {
 people.each do |person|
   puts person[1]
 end
+
+
+# Function to keep everything neat
+
+def test_function
+  puts "Please supply input"
+  text = gets.chomp
+  words = text.split(" ")
+
+  frequencies = Hash.new(0)
+
+
+  words.each do |word|
+    frequencies["#{word}"] += 1
+  end
+
+
+  frequencies = frequencies.sort_by do |k, v|
+    frequencies[k] = v
+  end
+  frequencies.reverse!
+
+  frequencies.each do |k,v|
+    puts "#{k} #{v.to_s}"
+  end
+end
+test_function
